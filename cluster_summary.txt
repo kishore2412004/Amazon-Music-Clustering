@@ -1,0 +1,26 @@
+MUSIC CLUSTERING REPORT
+
+         danceability  energy  loudness  speechiness  acousticness  \
+cluster                                                              
+0                0.59    0.55     -9.65         0.08          0.47   
+1                0.53    0.55    -11.29         0.13          0.40   
+2                0.52    0.40    -15.96         0.48          0.70   
+3                0.57    0.58     -9.16         0.06          0.37   
+4                0.43    0.63    -13.49         0.23          0.35   
+5                0.63    0.47    -12.54         0.52          0.57   
+
+         instrumentalness  liveness  valence   tempo  duration_ms  
+cluster                                                            
+0                    0.09      0.20     0.60  119.74    193351.71  
+1                    0.26      0.23     0.44  117.37    472406.16  
+2                    0.15      0.42     0.42  103.64   1455230.06  
+3                    0.07      0.19     0.52  120.91    277507.03  
+4                    0.35      0.34     0.24  113.87   3381704.97  
+5                    0.07      0.34     0.60  107.83     92455.94  
+
+Cluster Insights:
+Cluster 0: Party & energetic tracks
+Cluster 1: Calm acoustic or chill music
+Cluster 2: Rap/hip-hop style speechiness
+Cluster 3: Instrumental and ambient songs
+Cluster 4: Balanced pop/feel-good songs

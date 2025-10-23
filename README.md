@@ -36,11 +36,11 @@ This project integrates **Machine Learning (Clustering)**, **Spotify API**, and 
 | Cluster | Theme | Description |
 |----------|--------|-------------|
 | 0 | 🔥 Party & Dance Hits | High energy, loud, rhythmic — perfect for parties. |
-| 1 | 🌙 Chill Acoustic Vibes | Calm, soothing acoustic music for relaxation. |
-| 2 | 💥 Energetic Pop Beats | Upbeat pop songs with vibrant tempos. |
-| 3 | 🎸 Indie & Alternative | Raw, emotional indie and alternative tracks. |
+| 1 | 🌙 Pop & rock | More louder beats and Speechiness. |
+| 2 | 💥 Classical | Moderate instrumental and high acoustic. |
+| 3 | 🎸 Energitic | Raw, emotional indie and alternative tracks. |
 | 4 | 🎹 Instrumental Lounge | Lofi, background, and instrumental beats. |
-| 5 | ❤️ Romantic & Soft Songs | Emotional, soft ballads for relaxation or romance. |
+
 
 ---
 

@@ -617,36 +617,36 @@
 # st.download_button("💾 Download Final Clustered Dataset", csv, "clustered_songs_final.csv", "text/csv")
 
 
-# # import requests, base64, streamlit as st
+import requests, base64, streamlit as st
 
-# # # --- SPOTIFY CLIENT INFO ---
-# # client_id = st.secrets["spotify"]["client_id"]
-# # client_secret = st.secrets["spotify"]["client_secret"]
+# --- SPOTIFY CLIENT INFO ---
+client_id = st.secrets["spotify"]["client_id"]
+client_secret = st.secrets["spotify"]["client_secret"]
 
-# # auth_str = f"{client_id}:{client_secret}"
-# # b64_auth_str = base64.b64encode(auth_str.encode()).decode()
-# # token_resp = requests.post(
-# #     "https://accounts.spotify.com/api/token",
-# #     headers={"Authorization": f"Basic {b64_auth_str}"},
-# #     data={"grant_type": "client_credentials"}
-# # ).json()
+auth_str = f"{client_id}:{client_secret}"
+b64_auth_str = base64.b64encode(auth_str.encode()).decode()
+token_resp = requests.post(
+    "https://accounts.spotify.com/api/token",
+    headers={"Authorization": f"Basic {b64_auth_str}"},
+    data={"grant_type": "client_credentials"}
+).json()
 
-# # token = token_resp.get("access_token")
-# # headers = {"Authorization": f"Bearer {token}"}
+token = token_resp.get("access_token")
+headers = {"Authorization": f"Bearer {token}"}
 
-# # # --- SONG SEARCH ---
-# # song_name = "Lover Taylor Swift"
-# # search_url = f"https://api.spotify.com/v1/search?q={song_name.replace(' ', '%20')}&type=track&limit=1"
-# # track_resp = requests.get(search_url, headers=headers).json()
-# # st.write("🎯 TRACK SEARCH RESPONSE:", track_resp)
+# --- SONG SEARCH ---
+song_name = "Lover Taylor Swift"
+search_url = f"https://api.spotify.com/v1/search?q={song_name.replace(' ', '%20')}&type=track&limit=1"
+track_resp = requests.get(search_url, headers=headers).json()
+st.write("🎯 TRACK SEARCH RESPONSE:", track_resp)
 
-# # try:
-# #     track_id = track_resp["tracks"]["items"][0]["id"]
-# #     st.write("✅ Found Track ID:", track_id)
-# # except Exception as e:
-# #     st.write("❌ Could not extract track ID:", e)
+try:
+    track_id = track_resp["tracks"]["items"][0]["id"]
+    st.write("✅ Found Track ID:", track_id)
+except Exception as e:
+    st.write("❌ Could not extract track ID:", e)
 
-# # # --- AUDIO FEATURE TEST ---
-# # features_url = f"https://api.spotify.com/v1/audio-features?ids={track_id}"
-# # feat_resp = requests.get(features_url, headers=headers).json()
-# # st.write("🎧 RAW AUDIO FEATURES RESPONSE:", feat_resp)
+# --- AUDIO FEATURE TEST ---
+features_url = f"https://api.spotify.com/v1/audio-features?ids={track_id}"
+feat_resp = requests.get(features_url, headers=headers).json()
+st.write("🎧 RAW AUDIO FEATURES RESPONSE:", feat_resp)

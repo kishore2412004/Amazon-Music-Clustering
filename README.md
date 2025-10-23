@@ -15,7 +15,6 @@ This project integrates **Machine Learning (Clustering)**, **Spotify API**, and 
 
 ## 🌟 Key Features
 ✅ **Automatic Song Clustering:** Groups songs based on their acoustic and rhythmic properties.  
-✅ **Spotify-Powered Recommendations:** Fetches real songs & previews dynamically.  
 ✅ **Interactive Streamlit UI:** Explore clusters like “Party Hits” or “Chill Vibes” with audio previews.  
 ✅ **Visual Insights:** PCA plots, heatmaps, feature analysis, and radar charts for deep understanding.  
 ✅ **Ready-to-Run:** Uses your cleaned dataset (`clustered_songs_final.csv`) directly without file upload.  
@@ -56,15 +55,7 @@ The app includes a rich **Insights Dashboard**:
 
 ---
 
-## 🧩 How the Spotify Integration Works
 
-Each cluster is assigned a **Spotify search query keyword**, like “party pop hits” or “romantic love songs.”  
-When a cluster is selected:
-1. The app queries **Spotify’s Track Search API**.  
-2. Randomized results (top trending tracks) are fetched dynamically.  
-3. Each song’s **cover image, title, artist name, and preview** is displayed.  
-
----
 
 ## 💻 Technologies Used
 
@@ -72,7 +63,6 @@ When a cluster is selected:
 |-----------|-------|
 | Programming Language | Python |
 | Frontend Framework | Streamlit |
-| APIs | Spotify Web API |
 | Machine Learning | K-Means, PCA |
 | Visualization | Matplotlib, Seaborn |
 | Data Handling | Pandas, NumPy |
@@ -99,18 +89,8 @@ source .venv/bin/activate       # For Linux/Mac
 ```bash
 pip install -r requirements.txt
 ```
-### 4. Setup Spotify API Credentials
 
-- 1.Go to the Spotify Developer Dashboard
-- 2. Click “Create an App” → Give it any name
-- 3. Copy your Client ID and Client Secret
-- 4. Create a folder named .streamlit in your project directory and add a file called secrets.toml:
-```bash
-[spotify]
-client_id = "your_spotify_client_id_here"
-client_secret = "your_spotify_client_secret_here"
-```
-### 6. Run the Streamlit App
+### 4. Run the Streamlit App
 ```bash
 streamlit run app.py
 ```
